@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './components/hero-detail.component';
 import { HeroesComponent } from './components/heroes.component';
 import { DashboardComponent } from './components/dashboard.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
