@@ -8,6 +8,7 @@ import { HeroesComponent } from './components/heroes.component';
 import { DashboardComponent } from './components/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MessagesComponent } from './components/messages/messages.component';
+import { MessageService } from './service/message.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { MessagesComponent } from './components/messages/messages.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
