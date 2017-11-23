@@ -8,6 +8,7 @@ import {HeroDetailComponent} from './components/hero-detail.component';
 import {HeroesComponent} from './components/heroes.component';
 import {FormsModule} from '@angular/forms';
 import {APP_BASE_HREF} from '@angular/common';
+import {MessageService} from './service/message.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -24,7 +25,10 @@ describe('AppComponent', () => {
         FormsModule,
         AppRoutingModule
       ],
-      providers: [{provide: APP_BASE_HREF, useValue : '/' }]
+      providers: [
+        {provide: APP_BASE_HREF, useValue : '/' },
+        MessageService
+      ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
