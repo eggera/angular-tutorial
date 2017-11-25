@@ -9,6 +9,7 @@ import { DashboardComponent } from './components/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessageService } from './service/message.service';
+import {HeroService} from './service/hero.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { MessageService } from './service/message.service';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
