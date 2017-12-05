@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessageService } from './service/message.service';
 import {HeroService} from './service/hero.service';
+import {HttpClient} from '@angular/common/http';
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 
 
 @NgModule({
