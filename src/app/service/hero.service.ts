@@ -13,6 +13,7 @@ export class HeroService {
 
   private heroesUrl = 'api/heroes';  // URL to web api
 
+
   constructor(
         private http: HttpClient,
         private messageService: MessageService) { }
@@ -33,6 +34,16 @@ export class HeroService {
         tap(_ => this.log('Fetched hero with id '+id)),
         catchError(this.handleError<Hero>(`Error while getting hero with id ${id}`))
       );
+  }
+
+  updateHero(hero: Hero): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.http.put(this.heroesUrl, hero, httpOptions).pipe(
+      tap(_ => this.log(`updated hero id=${hero.id}`)),
+      catchError(this.handleError<any>('updateHero'))
+    );
   }
 
   /** Log a HeroService message with the MessageService */
