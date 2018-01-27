@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './components/hero-detail.component';
-import { HeroesComponent } from './components/heroes.component';
-import { DashboardComponent } from './components/dashboard.component';
+import { HeroDetailComponent } from './components/heroes/hero-detail.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessageService } from './service/message.service';
